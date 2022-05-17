@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/screens/components/custom_actions.dart';
+import 'package:untitled/screens/my_kurly/components/my_kurly_body.dart';
 
 class MyKurlyScreen extends StatelessWidget {
   const MyKurlyScreen({Key? key}) : super(key: key);
@@ -11,7 +12,12 @@ class MyKurlyScreen extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: const Text("마이컬리"),
-        actions: const [CustomActions()],
+        actions: const [
+          CustomActions()
+        ],
+      ),
+      body: const SingleChildScrollView(
+        child: MyKurlyBody(),
       ),
     );
   }
