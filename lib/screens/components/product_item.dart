@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/models/product.dart';
+import 'package:untitled/models/product_details_arguments.dart';
 import 'package:untitled/theme.dart';
 import 'package:untitled/string_extensions.dart';
+
+import '../details/details_screen.dart';
 
 class ProductItem extends StatelessWidget {
   final Product product;
@@ -23,7 +26,14 @@ class ProductItem extends StatelessWidget {
         // 이미지 파일임. 중요한 부분은 Expanded 로 감싸고 세로의 크기는 사용하는 부모 위젯에서 결정함.
         Expanded(
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              // Navigator 객체의 arguments 속성을 이용해 객체를 전달할 수 있음. (객체 전달하기)
+              Navigator.pushNamed(
+                  context,
+                  DetailScreen.routeName,
+                  arguments: ProductDetailsArguments(product: product)
+              );
+            },
             child: Image.network(
               product.imageUrl ?? "assets/images/kurly_banner_0.jpg",
               fit: BoxFit.cover,

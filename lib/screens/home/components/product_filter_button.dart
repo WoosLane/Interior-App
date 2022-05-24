@@ -18,7 +18,7 @@ class _ProductFilterButtonState extends State<ProductFilterButton> {
   Widget build(BuildContext context) {
     return PopupMenuButton(
       padding: EdgeInsets.zero,
-      offset: Offset(0, 0),
+      offset: const Offset(0, 0),
       icon: Align(
         alignment: Alignment.bottomRight,
         child: TextButton(
