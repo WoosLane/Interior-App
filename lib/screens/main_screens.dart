@@ -4,7 +4,7 @@ import 'package:untitled/constants.dart';
 import 'package:untitled/models/nav_item.dart';
 import 'package:untitled/screens/category/category_screen.dart';
 import 'package:untitled/screens/home/home_screen.dart';
-import 'package:untitled/screens/my_kurly/my_kurly_screen.dart';
+import 'package:untitled/screens/my_page/my_page_screen.dart';
 import 'package:untitled/screens/recommend/recommend_screen.dart';
 import 'package:untitled/screens/search/search_screen.dart';
 
@@ -31,7 +31,7 @@ class _MainScreensState extends State<MainScreens> {
           RecommendScreen(),
           CategoryScreen(),
           SearchScreen(),
-          MyKurlyScreen(),
+          MyPageScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

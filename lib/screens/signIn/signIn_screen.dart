@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/screens/signIn/components/kurly_sign_form.dart';
+import 'package:untitled/screens/signIn/components/interior_sign_form.dart';
 
 class SignInScreen extends StatelessWidget {
   //Flutter 가 이 화면으 요청할 때 경로의 이름으로 사용됨.
@@ -31,7 +31,7 @@ class SignInScreen extends StatelessWidget {
           preferredSize: Size.fromHeight(1.0),
         ),
       ),
-      body: const KurlySignForm(),
+      body: const InteriorSignForm(),
     );
   }
 }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:untitled/screens/recommend/components/card_product_item.dart';
 import 'package:untitled/screens/recommend/components/stack_product_item.dart';
 import 'package:untitled/theme.dart';
-
 import '../../models/product.dart';
 
 class RecommendScreen extends StatelessWidget {

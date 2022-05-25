@@ -26,7 +26,7 @@ class TextMenuCard extends StatelessWidget {
         color: Colors.white,
         elevation: 0,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -34,7 +34,7 @@ class TextMenuCard extends StatelessWidget {
                 title ?? "",
                 style: TextStyle(color: textColor, fontSize: 16),
               ),
-              Spacer(),
+              const Spacer(),
               SizedBox(
                 width: 26,
                 child: IconButton(

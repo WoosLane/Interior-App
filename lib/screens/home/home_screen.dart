@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          title: const Text("Kurly"),
+          title: const Text("인테리어"),
           actions: const [CustomActions()],
           bottom: PreferredSize(
             child: Container(
