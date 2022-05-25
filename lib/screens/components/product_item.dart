@@ -3,7 +3,6 @@ import 'package:untitled/models/product.dart';
 import 'package:untitled/models/product_details_arguments.dart';
 import 'package:untitled/theme.dart';
 import 'package:untitled/string_extensions.dart';
-
 import '../details/details_screen.dart';
 
 class ProductItem extends StatelessWidget {
