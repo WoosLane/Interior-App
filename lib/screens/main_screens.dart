@@ -28,9 +28,9 @@ class _MainScreensState extends State<MainScreens> {
         index: _selectedIndex,
         children: const [
           HomeScreen(),
-          RecommendScreen(),
+          //RecommendScreen(),
           CategoryScreen(),
-          SearchScreen(),
+          //SearchScreen(),
           MyPageScreen(),
         ],
       ),

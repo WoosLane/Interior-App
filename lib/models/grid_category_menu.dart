@@ -7,10 +7,12 @@ class GridCategoryMenu {
 
 // 샘플 데이터
 List gridCategoryMenuList = [
-  GridCategoryMenu(title: "식단관리", image: "assets/images/food_0.png"),
-  GridCategoryMenu(title: "간편한 아침 식사", image: "assets/images/food_1.png"),
-  GridCategoryMenu(title: "재구매 BEST", image: "assets/images/food_2.png"),
-  GridCategoryMenu(title: "베이커리", image: "assets/images/food_3.png"),
-  GridCategoryMenu(title: "컬리마트", image: "assets/images/food_4.png"),
-  GridCategoryMenu(title: "반찬가게", image: "assets/images/food_5.png"),
+  GridCategoryMenu(title: "도배/벽", image: "assets/images/1.jpeg"),
+  GridCategoryMenu(title: "바닥", image: "assets/images/2.jpeg"),
+  GridCategoryMenu(title: "주방", image: "assets/images/3.jpeg"),
+  GridCategoryMenu(title: "욕실", image: "assets/images/4.jpeg"),
+  GridCategoryMenu(title: "현관", image: "assets/images/5.jpeg"),
+  GridCategoryMenu(title: "발코니/샷시", image: "assets/images/6.jpeg"),
+  GridCategoryMenu(title: "조명", image: "assets/images/7.jpeg"),
+  GridCategoryMenu(title: "문", image: "assets/images/8.jpeg"),
 ];

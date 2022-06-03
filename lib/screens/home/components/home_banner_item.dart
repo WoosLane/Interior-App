@@ -3,14 +3,14 @@ import 'package:untitled/models/home_banner.dart';
 import 'package:untitled/screens/home/components/box_border_text.dart';
 import 'package:untitled/screens/home/components/number_indicator.dart';
 
-class KurlyBannerItem extends StatefulWidget {
-  const KurlyBannerItem({Key? key}) : super(key: key);
+class HomeBannerItem extends StatefulWidget {
+  const HomeBannerItem({Key? key}) : super(key: key);
 
   @override
-  State<KurlyBannerItem> createState() => _KurlyBannerItemState();
+  State<HomeBannerItem> createState() => _HomeBannerItemState();
 }
 
-class _KurlyBannerItemState extends State<KurlyBannerItem> {
+class _HomeBannerItemState extends State<HomeBannerItem> {
   //lib/model/home_banner_text  파일에서 만든 샘플 데이터.
   final List<HomeBanner> list = homeBannerList;
   //현재 페이지 뷰 색인을 저장하는 변수.

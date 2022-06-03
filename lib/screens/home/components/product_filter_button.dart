@@ -10,9 +10,9 @@ class ProductFilterButton extends StatefulWidget {
 
 class _ProductFilterButtonState extends State<ProductFilterButton> {
   // PopupMenuButton 의 초깃값.
-  String _selectedUItem = '신상품순';
+  String _selectedUItem = '최신순';
   // 메뉴로 사용할 목록.
-  final List _options = ['신상품순', '인기순', '혜택순'];
+  final List _options = ['최신순', '인기순', '혜택순'];
 
   @override
   Widget build(BuildContext context) {

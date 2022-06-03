@@ -1,15 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/screens/components/application.dart';
 import 'package:untitled/screens/components/product_item.dart';
 import 'package:untitled/screens/home/components/circle_container.dart';
 import 'package:untitled/screens/home/components/product_filter_button.dart';
-import '../../../models/product.dart';
 
 class NewProductPage extends StatelessWidget {
   const NewProductPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Future<List<Application>> applicationList = fetchData();
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       // CustomScrollView 사용하면 슬라이더를 직접 제공하여 목록, 그리드 및 확장 헤더와 같은
@@ -54,8 +56,19 @@ class NewProductPage extends StatelessWidget {
                   // ProductItem 위젯을 Stack 위젯으로 감싸 위젯을 더 추가해서 꾸밀 수 있음.
                   return Stack(
                     children: [
-                      ProductItem(
-                        product: productList[index],
+                      FutureBuilder<List<Application>>(
+                          future: applicationList,
+                          builder: (context, snapshot) {
+                            if (snapshot.hasData) {
+                              List<Application> userList = snapshot.data ?? [];
+                              return ProductItem(
+                                application: userList[index],
+                              );
+                            } else if (snapshot.hasError) {
+                              return Text("${snapshot.error}");
+                            }
+                            return const CircularProgressIndicator();
+                          }
                       ),
                       const Positioned(
                         bottom: 90,
@@ -66,7 +79,7 @@ class NewProductPage extends StatelessWidget {
                   );
                 },
                 // 자식의 위젯의 총 개수임.
-                childCount: productList.length,
+                childCount: applicationLength,
             ),
           )
         ],
