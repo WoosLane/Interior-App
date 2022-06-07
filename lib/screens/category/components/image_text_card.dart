@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/models/grid_category_menu.dart';
-import 'package:untitled/screens/category/components/wall_covering_page.dart';
+import '../components//wall_covering_page.dart';
 
 class ImageTextCard extends StatelessWidget {
   final GridCategoryMenu item;
@@ -15,7 +15,10 @@ class ImageTextCard extends StatelessWidget {
     return GestureDetector(
       // 여기에 디테일 스크린 비슷하게 만들어서 누르면 해당 카테고리 화면으로 넘어가게 만들기.
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const WallCoveringPage()));
+        Navigator.pushNamed(
+          context,
+          WallCoveringPage.routeName,
+        );
       },
       child: Card(
         shadowColor: Colors.black,

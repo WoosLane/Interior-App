@@ -3,7 +3,6 @@ import 'package:untitled/constants.dart';
 import 'package:untitled/models/product_details_arguments.dart';
 import 'package:untitled/screens/components/default_button.dart';
 import 'package:untitled/theme.dart';
-import '../../models/product.dart';
 import 'components/body.dart';
 
 class DetailScreen extends StatelessWidget {

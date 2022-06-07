@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class WallCoveringPage extends StatelessWidget {
+  static String routeName = "/categories";
+
   const WallCoveringPage({Key? key}) : super(key: key);
 
   @override
@@ -9,12 +11,6 @@ class WallCoveringPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('1'),
       ),
-      body: TextButton(
-      child: Center(child: const Text('1')),
-        onPressed: () {
-          Navigator.pop(context);
-        }
-      )
     );
     }
   }
