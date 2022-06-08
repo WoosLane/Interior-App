@@ -29,7 +29,7 @@ class ProductItem extends StatelessWidget {
               Navigator.pushNamed(
                   context,
                   DetailScreen.routeName,
-                  //arguments: ProductDetailsArguments(product: product)
+                  arguments: ProductDetailsArguments(application: application)
               );
             },
             // child: Image.network(
@@ -118,30 +118,3 @@ class ProductItem extends StatelessWidget {
   //   return "${discountPrice.toString().numberFormat()}원 ";
   // }
 }
-
-//
-// body: FutureBuilder<List<Home>>(
-// future: homeList,
-// builder: (context, snapshot) {
-// if (snapshot.hasData) {
-// List<Home> userList = snapshot.data ?? [];
-// return ListView(
-// children: [
-// ...List.generate(
-// homeLength,
-// (index) => Padding(
-// padding: const EdgeInsets.only(bottom: 8.0),
-// child: HomeBody(
-// home: userList[index]
-// ),
-// )
-// )
-// ],
-// );
-// } else if (snapshot.hasError) {
-// return Text("${snapshot.error}");
-// }
-// return const CircularProgressIndicator();
-//
-// }
-// ),

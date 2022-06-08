@@ -9,29 +9,34 @@ class SignInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: const Text(
-            "로그인",
-            style: TextStyle(color: Colors.black),
-        ),
-        //이전 화면으로 되돌아 가는 아이콘(화살표)을 자동으로 만들어줄 수 있음. 근데 false 로 해두고 직접 만듬.
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: const Text(
+              "로그인",
+              style: TextStyle(color: Colors.black),
           ),
-          //Navigator 객체의 pop 메서드를 이용해 화면을 종료.
-          onPressed: () => Navigator.pop(context),
+          //이전 화면으로 되돌아 가는 아이콘(화살표)을 자동으로 만들어줄 수 있음. 근데 false 로 해두고 직접 만듬.
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+            //Navigator 객체의 pop 메서드를 이용해 화면을 종료.
+            onPressed: () => Navigator.pop(context),
+          ),
+          bottom: const PreferredSize(
+            child: Divider(),
+            preferredSize: Size.fromHeight(1.0),
+          ),
         ),
-        bottom: const PreferredSize(
-          child: Divider(),
-          preferredSize: Size.fromHeight(1.0),
-        ),
+        body: const InteriorSignForm(),
       ),
-      body: const InteriorSignForm(),
     );
   }
 }

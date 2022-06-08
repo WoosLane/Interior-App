@@ -22,8 +22,8 @@ class ImageTextCard extends StatelessWidget {
       },
       child: Card(
         shadowColor: Colors.black,
-        elevation: 3,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+        elevation: 1,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         // Card 위젯의 기본 margin 값을 0으로 처리.
         margin: EdgeInsets.zero,
         child: Column(

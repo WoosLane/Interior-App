@@ -18,6 +18,7 @@ class DetailScreen extends StatelessWidget {
     // arguments 의 타입이 Object? 이기 때문에 사용하기 위해서는
     // ProductDetailsArguments 객체로 데이터의 자료형을 변환해 주어야 함.
     // flutter 에서는 as 키워드로 형 변환할 수 있음.
+
     final arguments = ModalRoute.of(context)!.settings.arguments as ProductDetailsArguments;
 
     return Scaffold(
@@ -25,13 +26,13 @@ class DetailScreen extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.black),
         backgroundColor: Colors.white,
         title: Text(
-          "${arguments.product.title}",
+          arguments.application.location,
           style: textTheme().subtitle1?.copyWith(color: Colors.black),
         ),
       ),
       // Body 위젯 안에 arguments 로 전달받은 product 객체를 넘겨줌.
       body: Body(
-        product: arguments.product,
+        application: arguments.application,
       ),
       // SafeArea 는 하단에 노치 영역과 위젯 사이에 충분한 패딩을 주기 위해 사용함.
       bottomNavigationBar: SafeArea(

@@ -9,6 +9,6 @@ final Map<String, WidgetBuilder> route = {
   SplashScreen.routeName: (context) => const SplashScreen(),
   MainScreens.routeName: (context) => const MainScreens(),
   SignInScreen.routeName: (context) => const SignInScreen(), //SignInScreen 경로명 등록.
-  DetailScreen.routeName: (context) => const DetailScreen(),
+  DetailScreen.routeName: (context) =>  const DetailScreen(),
   WallCoveringPage.routeName: (context) => const WallCoveringPage(),
 };

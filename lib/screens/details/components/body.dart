@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/constants.dart';
-import 'package:untitled/string_extensions.dart';
-import '../../../models/product.dart';
+import 'package:untitled/screens/components/application.dart';
 
 class Body extends StatelessWidget {
-  final Product product;
+  final Application application;
   // 생성자의 인자 값으로 Product 객체를 넘겨받음.
-  const Body({Key? key, required this.product}) : super(key: key);
+  const Body({Key? key, required this.application}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 500,
-          child: Image.network(
-            product.imageUrl ?? "",
-            fit: BoxFit.cover,
-          ),
+          // child: Image.network(
+          //   application.imgUrl ?? "",
+          //   fit: BoxFit.cover,
+          // ),
         ),
         Padding(
           padding: const EdgeInsets.all(16),
@@ -25,7 +24,7 @@ class Body extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                product.title ?? "",
+                application.location, //?? "" 일단 생략함
                 style: const TextStyle(
                   fontSize: 20,
                   color: Colors.black,
@@ -38,7 +37,7 @@ class Body extends StatelessWidget {
                 style: TextStyle(fontSize: 16, color: kTextColor),
               ),
               Text(
-                "${product.price.toString().numberFormat()}원",
+                "${application.jobGroup}원",
                 style: const TextStyle(
                   fontSize: 20,
                   color: Colors.black,

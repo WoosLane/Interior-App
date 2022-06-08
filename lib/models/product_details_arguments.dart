@@ -1,7 +1,7 @@
-import 'package:untitled/models/product.dart';
+import 'package:untitled/screens/components/application.dart';
 
 class ProductDetailsArguments {
-  final Product product;
+  final Application application;
 
-  ProductDetailsArguments({required this.product});
+  ProductDetailsArguments({required this.application});
 }
