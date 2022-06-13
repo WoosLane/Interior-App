@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:untitled/models/benefit_banner.dart';
 import 'package:untitled/theme.dart';
 
-class BenefitPage extends StatefulWidget {
-  const BenefitPage({Key? key}) : super(key: key);
+class MyApplicationPage extends StatefulWidget {
+  const MyApplicationPage({Key? key}) : super(key: key);
 
   @override
-  State<BenefitPage> createState() => _BenefitPageState();
+  State<MyApplicationPage> createState() => _MyApplicationPageState();
 }
 
-class _BenefitPageState extends State<BenefitPage> {
+class _MyApplicationPageState extends State<MyApplicationPage> {
 
   Future _onRefresh() async {
     await Future.delayed(const Duration(milliseconds: 1000));

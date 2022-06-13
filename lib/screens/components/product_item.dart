@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/constants.dart';
 import 'package:untitled/models/product_details_arguments.dart';
 import 'package:untitled/theme.dart';
 import '../details/details_screen.dart';
@@ -36,33 +37,33 @@ class ProductItem extends StatelessWidget {
             //   product.imageUrl ?? "assets/images/kurly_banner_0.jpg",
             //   fit: BoxFit.cover,
             // ),
-            child: SizedBox(
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: kPrimaryColor,
+              ),
               height: textContainerHeight,
               width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.only(top: 8),
+                padding: const EdgeInsets.all(8),
                 child: Text.rich(
                     TextSpan(
                       children: [
                         TextSpan(
-                            text: "${application.location} ${lineChange == true ? "\n" : ""}",
-                            style: textTheme().subtitle1
+                            text: "주소: ${application.location} ${lineChange == true ? "\n" : ""}\n",
+                            style: textTheme().subtitle1?.copyWith(color: Colors.white),
                         ),
                         TextSpan(
-                          text: application.jobGroup,
+                          text: '\n필요직군: ${application.jobGroup}\n',
                           style: textTheme().headline2?.copyWith(color: Colors.red),
                         ),
                         TextSpan(
-                            text: application.startDate,
-                            style: textTheme().bodyText2?.copyWith(
-                                decoration: TextDecoration.lineThrough
-                            )
+                            text: '\n시작일: ${application.startDate}\n',
+                            style: textTheme().bodyText2?.copyWith(color: Colors.white)
                         ),
                         TextSpan(
-                            text: application.endDate,
-                            style: textTheme().bodyText2?.copyWith(
-                                decoration: TextDecoration.lineThrough
-                            )
+                            text: '종료일: ${application.endDate}',
+                            style: textTheme().bodyText2?.copyWith(color: Colors.white)
                         )
                       ],
                     )
@@ -71,50 +72,7 @@ class ProductItem extends StatelessWidget {
             ),
           ),
         ),
-        // Text.rich 위젯을 이용하여 문단별로 글자 스타일을 추가함.
-        // 글자가 들어가는 부분은 기본 높이 값을 80으로 지정하고
-        // 상황에 따라 부모 위젯에서 지정할 수 있도록 변수를 추가함.
-        // SizedBox(
-        //   height: textContainerHeight,
-        //   width: double.infinity,
-        //   child: Padding(
-        //     padding: const EdgeInsets.only(top: 8),
-        //     child: Text.rich(
-        //       TextSpan(
-        //         children: [
-        //           TextSpan(
-        //             text: "${product.title} ${lineChange == true ? "\n" : ""}",
-        //             style: textTheme().subtitle1
-        //           ),
-        //           TextSpan(
-        //             text: "${product.discount}%",
-        //             style: textTheme().headline2?.copyWith(color: Colors.red),
-        //           ),
-        //           TextSpan(
-        //             text: discountPrice(
-        //               product.price ?? 0, product.discount ?? 0
-        //             ),
-        //             style: textTheme().headline2,
-        //           ),
-        //           // extension method numberFormat() 함수를 사용함.
-        //           TextSpan(
-        //             text: "${product.price.toString().numberFormat()}원",
-        //             style: textTheme().bodyText2?.copyWith(
-        //                 decoration: TextDecoration.lineThrough
-        //             )
-        //           )
-        //         ],
-        //       )
-        //     ),
-        //   ),
-        // )
       ],
     );
   }
-  // 할인율에 따라 가격이 계산되는 함수.
-  // String discountPrice(int price, int discount) {
-  //   double discountRate = ((100 - discount) / 100);
-  //   int discountPrice = (price * discountRate).toInt();
-  //   return "${discountPrice.toString().numberFormat()}원 ";
-  // }
 }

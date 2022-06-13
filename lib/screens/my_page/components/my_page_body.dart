@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/models/text_menu.dart';
-import 'package:untitled/screens/category/components/wall_covering_page.dart';
+import 'package:untitled/screens/category/components/categories/wall_covering_page.dart';
 import 'package:untitled/screens/components/text_menu_card.dart';
 import 'package:untitled/screens/my_page/components/my_page_header.dart';
 

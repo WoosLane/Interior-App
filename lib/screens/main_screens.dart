@@ -23,9 +23,7 @@ class _MainScreensState extends State<MainScreens> {
         index: _selectedIndex,
         children: const [
           HomeScreen(),
-          //RecommendScreen(),
           CategoryScreen(),
-          //SearchScreen(),
           MyPageScreen(),
         ],
       ),
@@ -36,7 +34,6 @@ class _MainScreensState extends State<MainScreens> {
         currentIndex: _selectedIndex,
         backgroundColor: Colors.white,
         onTap: onTaped,
-        //nav_item.dart 파일에서 만든 데이터 navItems 개수만큼 반복문을 돌면서 _buildBottomNavigationBarItem() 메서드를 호출.
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: '홈'),
           BottomNavigationBarItem(icon: Icon(Icons.list_alt_rounded), label: '카테고리'),

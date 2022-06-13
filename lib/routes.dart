@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/screens/category/components/wall_covering_page.dart';
+import 'package:untitled/screens/category/components/categories/wall_covering_page.dart';
 import 'package:untitled/screens/details/details_screen.dart';
 import 'package:untitled/screens/signIn/signIn_screen.dart';
 import 'screens/main_screens.dart';

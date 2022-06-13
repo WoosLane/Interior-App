@@ -12,8 +12,8 @@ class DefaultButton extends StatelessWidget {
    {Key? key,
     this.text,
     this.press,
-    this.color = kPrimaryColor}
-  ) : super(key: key);
+    this.color = kPrimaryColor
+   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -2,11 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/screens/components/application.dart';
 import 'package:untitled/screens/components/product_item.dart';
-import 'package:untitled/screens/home/components/circle_container.dart';
 import 'package:untitled/screens/home/components/product_filter_button.dart';
 
-class NewProductPage extends StatelessWidget {
-  const NewProductPage({Key? key}) : super(key: key);
+class HomeMain extends StatelessWidget {
+  const HomeMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,28 +53,19 @@ class NewProductPage extends StatelessWidget {
             delegate: SliverChildBuilderDelegate(
                 (BuildContext context, int index) {
                   // ProductItem 위젯을 Stack 위젯으로 감싸 위젯을 더 추가해서 꾸밀 수 있음.
-                  return Stack(
-                    children: [
-                      FutureBuilder<List<Application>>(
-                          future: applicationList,
-                          builder: (context, snapshot) {
-                            if (snapshot.hasData) {
-                              List<Application> userList = snapshot.data ?? [];
-                              return ProductItem(
-                                application: userList[index],
-                              );
-                            } else if (snapshot.hasError) {
-                              return Text("${snapshot.error}");
-                            }
-                            return const CircularProgressIndicator();
-                          }
-                      ),
-                      const Positioned(
-                        bottom: 90,
-                        right: 10,
-                        child: CircleContainer(iconPath: 'assets/icons/shopping-cart.svg'),
-                      )
-                    ],
+                  return FutureBuilder<List<Application>>(
+                      future: applicationList,
+                      builder: (context, snapshot) {
+                        if (snapshot.hasData) {
+                          List<Application> userList = snapshot.data ?? [];
+                          return ProductItem(
+                            application: userList[index],
+                          );
+                        } else if (snapshot.hasError) {
+                          return Text("${snapshot.error}");
+                        }
+                        return const Center(child: CircularProgressIndicator());
+                      }
                   );
                 },
                 // 자식의 위젯의 총 개수임.

@@ -29,6 +29,8 @@ class _ProductFilterButtonState extends State<ProductFilterButton> {
               const Icon(Icons.arrow_drop_down, color: Colors.black),
             ],
           ),
+
+          // 누르면 필터에 맞게 재정렬 되는 함수 여기 넣으면 될듯.
           onPressed: null,
         ),
       ),

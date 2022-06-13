@@ -36,19 +36,23 @@ class Body extends StatelessWidget {
                 "상세보기 화면 입니다.",
                 style: TextStyle(fontSize: 16, color: kTextColor),
               ),
+              const SizedBox(height: 8),
               Text(
-                "${application.jobGroup}원",
+                application.jobGroup,
                 style: const TextStyle(
                   fontSize: 20,
-                  color: Colors.black,
+                  color: Colors.red,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(height: 8),
-              const Text(
-                "로그인 후, 적립혜택이 제공됩니다.",
-                style: TextStyle(fontSize: 16, color: kPrimaryColor),
-              )
+              Text(
+                '${application.startDate} ~ ${application.endDate}',
+                style: const TextStyle(
+                  fontSize: 16,
+                  color: kTextColor,
+                ),
+              ),
             ],
           ),
         )

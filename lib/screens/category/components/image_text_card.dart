@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/models/grid_category_menu.dart';
-import '../components//wall_covering_page.dart';
+import 'categories/wall_covering_page.dart';
 
 class ImageTextCard extends StatelessWidget {
   final GridCategoryMenu item;
@@ -33,6 +33,7 @@ class ImageTextCard extends StatelessWidget {
               flex: 3,
               child: Container(
                 decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.only(topLeft: Radius.circular(10.0), topRight: Radius.circular(10.0)),
                   image: DecorationImage(
                     image: AssetImage(item.image),
                     fit: BoxFit.cover,
@@ -40,11 +41,6 @@ class ImageTextCard extends StatelessWidget {
                 ),
               ),
             ),
-            // 텍스트로 표시할 부분에 Expanded 위젯의 flex 속성을 1로 정의.
-            // Card 위젯은 기본적으로 자식 위젯의 크기에 따라 카드 위젯의 크기가 결정되지만
-            // 여기선 자식 위젯도 크기를 고정된 크기로 정하지 않음.
-            // 이유는 사용하는 부모 위젯에서 크기에 제약을 설정할 수 있게 하기 위함.
-            // 그리고 Card 위젯의 기본 라운드 처리된 모양도 제거.
             Expanded(
               flex: 1,
               child: Align(

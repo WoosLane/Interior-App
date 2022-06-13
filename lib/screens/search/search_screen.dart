@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/constants.dart';
-import 'package:untitled/screens/components/custom_actions.dart';
 import 'package:untitled/screens/search/components/default_search_field.dart';
 import '../../models/search_keywords.dart';
 
@@ -12,7 +11,6 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("검색"),
-        actions: const [CustomActions()],
         automaticallyImplyLeading: false,
       ),
       body: ListView(
