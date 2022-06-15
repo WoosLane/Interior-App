@@ -4,6 +4,7 @@ import 'package:untitled/constants.dart';
 import 'package:untitled/screens/home/components/my_application_page.dart';
 import 'package:untitled/screens/home/components/home_main.dart';
 import 'package:untitled/theme.dart';
+import 'components/submit_application_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -24,7 +25,13 @@ class HomeScreen extends StatelessWidget {
           title: const Text("인테리어"),
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SubmitApplicationPage()),
+                );
+
+              },
               icon: const Icon(CupertinoIcons.add)
             )
           ],
